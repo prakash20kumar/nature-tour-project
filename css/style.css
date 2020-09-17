@@ -532,6 +532,10 @@ body {
   .popup__left {
     width: 33.333333%;
     display: table-cell; }
+    @media (max-width: 56.25em) {
+      .popup__left {
+        width: 0;
+        display: none; } }
   .popup__right {
     width: 66.6666667%;
     display: table-cell;
@@ -550,6 +554,12 @@ body {
     -moz-hyphens: auto;
     -ms-hyphens: auto;
     hyphens: auto; }
+    @media (max-width: 56.25em) {
+      .popup__text {
+        column-count: 1;
+        column-gap: normal;
+        font-size: 1.2rem;
+        margin-bottom: 2.5rem; } }
   .popup__content {
     position: absolute;
     top: 50%;
@@ -578,6 +588,9 @@ body {
     display: inline-block;
     transition: all 0.2s;
     line-height: 1; }
+    @media (max-width: 56.25em) {
+      .popup__close:link, .popup__close:visited {
+        font-size: 2rem; } }
   .popup__close:hover {
     color: #55c57a; }
 

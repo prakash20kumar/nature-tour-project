@@ -13,6 +13,11 @@
 	&__left {
 		width: 33.333333%;
 		display: table-cell;
+
+		@include respond(tab-port) {
+			width: 0;
+			display: none;
+		}
 	}
 
 	&__right {
@@ -38,6 +43,13 @@
 		-moz-hyphens: auto;
 		-ms-hyphens: auto;
 		hyphens: auto;
+
+		@include respond(tab-port) {
+			column-count: 1;
+			column-gap: normal;
+			font-size: 1.2rem;
+			margin-bottom: 2.5rem;
+		}
 	}
 
 	&__content {
@@ -52,8 +64,6 @@
 		display: table;
 		overflow: hidden;
 		transition: all 0.5s 0.2s;
-		//opacity: 0;
-		//transform: scale(0.5) translate(-50, -50);
 	}
 
 	//open state
@@ -79,6 +89,10 @@
 			display: inline-block;
 			transition: all 0.2s;
 			line-height: 1;
+
+			@include respond(tab-port) {
+				font-size: 2rem;
+			}
 		}
 
 		&:hover {
